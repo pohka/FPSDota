@@ -1,0 +1,11 @@
+// Dota Heroes File
+"DOTAAbilities"
+{
+	"camera_dummy_abil"
+	{
+		"BaseClass"				 "ability_lua"
+		"ScriptFile"			 "abils/camera_dummy_abil.lua"
+		"AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Level"                  "1"
+	}
+}

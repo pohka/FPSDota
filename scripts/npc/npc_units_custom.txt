@@ -1,0 +1,20 @@
+// Units File
+"DOTAUnits"
+{
+	"Version"	"1"
+	
+	"camera_dummy"
+	{
+		"BaseClass"             "npc_dota_creature"
+        "Model"                 "models/development/invisiblebox.vmdl"
+        "Level"                 "1"
+        "HasInventory"          "0"
+		"ModelScale" 			"1"
+		
+		"BoundsHullName"		"DOTA_HULL_SIZE_SMALL"	
+		"Ability1"				"camera_dummy_abil"	
+		"VisionDaytimeRange"	"0"	
+		"VisionNighttimeRange"	"0"		
+	}
+	
+}
