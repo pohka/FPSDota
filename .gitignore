@@ -2,5 +2,6 @@ map/*
 materials/*
 panorama/*
 maps/*
+resource/*
 *.lnk
 *.bin
