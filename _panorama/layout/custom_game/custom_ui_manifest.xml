@@ -1,7 +1,6 @@
 <root>
 	<scripts>
 		<include src="file://{resources}/scripts/custom_game/camera.js" />
-		<include src="file://{resources}/scripts/custom_game/input.js" />
 	</scripts>
  
 	<Panel>

@@ -1,37 +1,10 @@
 "AddonInfo"
 {
 	"TeamCount" "2"
-	"maps"      "your_map"
+	"maps"      "arena"
 	"IsPlayable"  "1"
-	"test_map"
+	"arena"
 	{
 		  "MaxPlayers"                    "10"
-	}
-	"Default_Keys"
-	{
-		"01"
-		{
-			"Key"       "W"
-			"Command"   "+UpKey"
-			"Name"      "up"
-		}
-		"02"
-		{
-			"Key"       "S"
-			"Command"   "+DownKey"
-			"Name"      "down"
-		}
-		"03"
-		{
-			"Key"       "A"
-			"Command"   "+LeftKey"
-			"Name"      "left"
-		}
-		"04"
-		{
-			"Key"       "D"
-			"Command"   "+RightKey"
-			"Name"      "right"
-		}
 	}
 }

@@ -7,13 +7,34 @@
 	{
 		"override_hero"				"npc_dota_hero_windrunner"
 		"MovementTurnRate"			"40"
-		"MovementSpeed"				"400"
-		"VisionDaytimeRange"		"2000"
-		"Ability1"					"windrunner_powershot"
-		"Ability2"					""
+		"MovementSpeed"				"500"
+		"VisionDaytimeRange"		"2800"
+		"Ability1"					""
+		"Ability2"					"windrunner_powershot"
 		"Ability3"					""
 		"Ability4"					""
 		"Ability5"					""
 		"Ability6"					""
+		
+		"AttackCapabilities"    	"DOTA_UNIT_CAP_NO_ATTACK"
+		"StatusHealth"				"380"
+		"StatusHealthRegen"			"10000"
+		"StatusMana"				"10000"
+		"StatusManaRegen"			"10000"
+		
+		// Stats
+		//--------------------------------------
+		"AttributeBaseStrength"		"0"
+		"AttributeStrengthGain"		"0"
+		"AttributeBaseIntelligence"	"0"
+		"AttributeIntelligenceGain"	"0"
+		"AttributeBaseAgility"		"0"
+		"AttributeAgilityGain"		"0"
+		"MagicalResistance"			"0"
+		"ArmorPhysical"				"0"
+		
+		"BountyXP"                  "0"     // Experience earn.
+	    "BountyGoldMin"             "0"     // Gold earned min.
+	    "BountyGoldMax"             "0"     // Gold earned max.
 	}
 }

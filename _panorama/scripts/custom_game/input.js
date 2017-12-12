@@ -51,6 +51,6 @@ function SendInput()
 	Game.AddCommand( "-LeftKey", LeftReleased, "", 0 );
 	Game.AddCommand( "+RightKey", RightPressed, "", 0 );
 	Game.AddCommand( "-RightKey", RightReleased, "", 0 );
-	GameEvents.Subscribe( "npc_spawned", SetCamera );
+	
 	SendInput()
 })();
