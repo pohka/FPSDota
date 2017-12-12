@@ -3,10 +3,17 @@
 // the specified key-value combinations.  Use override_hero <hero_to_override> for this.
 "DOTAHeroes"
 {
-	"sniper"
+	"windrunner"
 	{
-		"override_hero"				"npc_dota_hero_sniper"
-		"MovementTurnRate"			"4.0"
-		"VisionDaytimeRange"		"2000"	
+		"override_hero"				"npc_dota_hero_windrunner"
+		"MovementTurnRate"			"40"
+		"MovementSpeed"				"400"
+		"VisionDaytimeRange"		"2000"
+		"Ability1"					"windrunner_powershot"
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability5"					""
+		"Ability6"					""
 	}
 }

@@ -14,33 +14,36 @@ function camera_dummy_abil:OnSpellStart()
 	self:SetContextThink("Tick", function() return self:SetPos() end, self.TICK_RATE)
 end
 
---keeps dummy in from of player each frame
+--keeps dummy in front of player each frame
 function camera_dummy_abil:SetPos()
 	local caster = self:GetCaster()
 	local owner = caster:GetOwner()
 	if owner ~= nil then
+		--calculte yaw rotation
+		
 		local forward = owner:GetForwardVector()
-		local pos = owner:GetOrigin() + forward * self.OFFSET
 		
+		-- degrees = acos(v1:Dot(v2)/|v1|*|v2|)
 		local dot = self.WORLD_FORWARD:Dot(forward)
-		--local rot = 
-		local cross = self.WORLD_FORWARD:Cross(forward)
-		
-		--print("rot:" .. tostring(rot))
-		--print("cross:" .. tostring(cross.z))
-		local a = dot/(self.WORLD_FORWARD:Length2D() * forward:Length2D())
+		local a = dot/(self.WORLD_FORWARD:Length() * forward:Length())
 		local val = math.acos(a)
-		--print("a:" .. tostring(a))
-		--print("val:" .. tostring(val))
 		local degrees = val/math.pi  * 180
+		
+		--check if vectors are pointing in the same direction
+		local cross = self.WORLD_FORWARD:Cross(forward)
 		if cross.z < 0 then
 			 degrees = -degrees
 		end
-		--print("deg:" .. tostring(degrees))
+		
+		local pos = owner:GetOrigin() + forward * self.OFFSET
+		pos.z = owner:GetAbsOrigin().z 
+		caster:SetAbsOrigin(pos)
+		--local h = GetGroundHeight(owner:GetAbsOrigin(), owner)
 		
 		local keyName = "" .. tostring(owner:GetPlayerID())
 		CustomNetTables:SetTableValue("camera", keyName, { yaw = degrees })
-		caster:SetOrigin(pos)
+		
+		
 	else
 		print("owner of camera_dummy not found")
 	end

@@ -23,10 +23,20 @@ function RightReleased(){ inputBuffer["right"] = 0; }
 function SendInput()
 {
 	var playerID = Players.GetLocalPlayer()
+	
+	//convert cursor position in a value form -1 to 1, with 0 being the center of the axis
+	var cursorPos = GameUI.GetCursorPosition();
+	var halfScreenW = Game.GetScreenWidth() * 0.5;
+	var halfScreenH = Game.GetScreenHeight() * 0.5;
+	var cursorX = (cursorPos[0] - halfScreenW) / halfScreenW;
+	var cursorY = -(cursorPos[1] - halfScreenH) / halfScreenH;
+	
 	GameEvents.SendCustomGameEventToServer("input", { 
 		playerid : playerID, 
 		move_x : inputBuffer["right"] - inputBuffer["left"],
-		move_y : inputBuffer["up"] - inputBuffer["down"]
+		move_y : inputBuffer["up"] - inputBuffer["down"],
+		cursor_x : cursorX,
+		cursor_y : cursorY,
 	});
 	$.Schedule(0.03, SendInput)
 }
